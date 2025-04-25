@@ -1,20 +1,19 @@
-[project]
+[tool.poetry]
 name = "c2"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "Your Name",email = "you@example.com"}
-]
+description = "c2 in python"
+authors = ["rais <rais@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "pwn (>=1.0,<2.0)"
-]
 
-[tool.poetry]
-packages = [{include = "c2", from = "src"}]
+[tool.poetry.dependencies]
+python = "^3.12"
+pre-commit = "^4.2.0"
+pytest = "^8.3.5"
 
+
+[tool.poetry.scripts]
+try = "ip a"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
